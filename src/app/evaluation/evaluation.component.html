@@ -1,0 +1,7 @@
+Age<input name="age" type="number" placeholder="votre age ici" [(ngModel)]="age">
+{{age}}
+<p *ngIf="age<18"> mineur </p>
+<p *ngIf="age>=18 && age<75"> majeur </p>
+<p *ngIf="age>=75"> sénior </p>
+
+
