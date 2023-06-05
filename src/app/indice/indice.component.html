@@ -1,0 +1,13 @@
+<form>
+  nom:<input type="text" [(ngModel)]="personne.nom" name="nom" placeholder="nom"><br>
+  prénom:<input type="text" name="prénom" [(ngModel)]="personne.prenom" placeholder="prénom"><br>
+  poids:<input type="number" name="poid" [(ngModel)]="personne.poids" placeholder="votre poids en kg"><br>
+  taille:<input type="number" [(ngModel)]="personne.taille" name="taille" placeholder="votre taille en m"><br>
+  <button>interpreter</button>
+</form>
+ <h2>{{personne.nom}} {{personne.prenom}}</h2>
+  <p *ngIf="personne.poids >0 && personne.taille >0">
+
+    Imc= {{personne.poids/ (personne.taille*personne.taille)  }}
+</p>
+
