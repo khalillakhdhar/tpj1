@@ -1,4 +1,4 @@
-<form>
+<form (submit)="calculer()">
     Titre: <input [(ngModel)]="titre" type="text" name="titre"><br>
     Quantité: <input [(ngModel)]="quantite" type="number" min="1" name="quantité"><br>
     Prix: <input [(ngModel)]="prix" type="number"  name="prix"><br>
