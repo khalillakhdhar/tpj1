@@ -1,7 +1,17 @@
 <form>
     Titre: <input [(ngModel)]="titre" type="text" name="titre"><br>
     Quantité: <input [(ngModel)]="quantite" type="number" min="1" name="quantité"><br>
-    Prix: <input [(ngModel)]="prix" type="number" min="1" name="prix"><br>
-    <button type="submit">Calculer T.V.A</button>
+    Prix: <input [(ngModel)]="prix" type="number"  name="prix"><br>
+    <button type="submit">Calculer T.V.A</button><br>
+produit : {{titre}}
+<div *ngIf="prix<=0 || quantite<=0">
+le prix et la quantité doivent être >0
+
+</div>
+<div *ngIf="prix>0 && quantite>0">
+  montant net à payer:  {{quantite*prix | currency:'EUR' }}
+
+  </div>
+
 
 </form>
